@@ -43,6 +43,5 @@ create table if not exists musicians_albums (
 create table if not exists composition_digest (
 	id serial primary key,
 	digest_id  integer references digests(id),
-	musician_album_id  integer references musicians_albums(id),
 	track_id  integer references tracks(id)
 );
